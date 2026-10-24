@@ -14,15 +14,19 @@ this.header= new Header(page); // object
 }
 // open page 
 
-async open():Promise<void>{
-    await this.page.goto(this.path,{waitUntil: 'documentcontentloaded'});
-}
+  async open(): Promise<void> {
+    await this.page.goto(this.path, { waitUntil: 'domcontentloaded' });
+  }
 
 // notifocations 
 //closeNotification
 // page title capture - get 
-get pageTitle():Locator{
+get pageTitle():Locator{ //it is like property of base page, 
     return this.page.locator('.page-title h1');
 }
 
+
 }
+
+
+// base page  is parent abstract for all pom pages 

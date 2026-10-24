@@ -17,8 +17,8 @@ readonly slider:Locator;
 constructor(page:Page){
     //this and super
     super(page);
-    this.products=page.locator('.product-grid home-page-product-grid');
-    this.slider=page.locator('.slider-wrapper');
+    this.products=page.locator('.product-grid home-page-product-grid'); //class
+    this.slider=page.locator('.slider-wrapper');// class= slider-wrapper' 
 
 }
 
